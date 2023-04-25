@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 public class GlobalExceptionHandler {
     @ResponseBody
-    @ExceptionHandler(NotFoundException.class)
+    @ExceptionHandler(NumberOutOfRangeException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     public String numberOutOfRangeHandler(NumberOutOfRangeException ex) {
         return ex.getMessage();
