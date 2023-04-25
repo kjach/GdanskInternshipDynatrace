@@ -1,5 +1,8 @@
 package pl.jach.gdanskinternshipdynatrace.service;
 
+import pl.jach.gdanskinternshipdynatrace.exception.BadDateFormatException;
+import pl.jach.gdanskinternshipdynatrace.exception.NotFoundException;
+import pl.jach.gdanskinternshipdynatrace.exception.NumberOutOfRangeException;
 import pl.jach.gdanskinternshipdynatrace.model.Exchange;
 import pl.jach.gdanskinternshipdynatrace.model.Rate;
 import org.springframework.http.ResponseEntity;
