@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.regex.Pattern;
 
-import static org.apache.commons.lang3.time.DateUtils.round;
 
 @Service
 public class ExchangeService {
@@ -65,7 +64,7 @@ public class ExchangeService {
 
     /**
      * Method used to find the major difference between the buy and ask rate
-     * fora given currency and number of last quotations
+     * for a given currency and number of last quotations.
      * @param currencyCode A three-character string code for given currency, ex. GBP
      * @param numberOfQuotations An int number of last quotations in range between 1 and 255
      * @return Returns the found major difference of buy and ask rates
