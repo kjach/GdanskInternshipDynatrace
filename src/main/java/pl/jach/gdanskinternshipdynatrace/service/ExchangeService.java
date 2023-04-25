@@ -9,7 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
+
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.regex.Pattern;
+
+import static org.apache.commons.lang3.time.DateUtils.round;
 
 @Service
 public class ExchangeService {
@@ -80,6 +85,7 @@ public class ExchangeService {
                 maxDifference = difference;
             }
         }
-        return maxDifference;
+        BigDecimal foundMaxDifference = new BigDecimal(Double.toString(maxDifference));
+        return foundMaxDifference.setScale(4, RoundingMode.FLOOR).doubleValue();
     }
 }
