@@ -45,8 +45,8 @@ class ExchangeServiceTest {
 
     @Test
     void givenCurrencyCodeAndNumberOfQuotations_whenGetMaxAndMinOfAvgExchangeRate_thenReturnMaxAndMinAverageExchangeRates() {
-        String expectedMaxAndMinAverageExchangeRates ="Max: 5.3041\n" + "Min: 5.1958";
-        String actualMaxAndMinAverageExchangeRates = (String) exchangeService.getMaxAndMinOfAvgExchangeRate("GBP", 10);
+        String expectedMaxAndMinAverageExchangeRates ="Max: 5.7338\n" + "Min: 5.1861";
+        String actualMaxAndMinAverageExchangeRates = (String) exchangeService.getMaxAndMinOfAvgExchangeRate("GBP", 200);
         assertEquals(expectedMaxAndMinAverageExchangeRates, actualMaxAndMinAverageExchangeRates);
     }
 
