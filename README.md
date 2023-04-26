@@ -7,6 +7,7 @@ Project made for recruitment purposes using [Narodowy Bank Polski's API](http://
 * Spring Boot 3.0.6
 
 # Installation
+## GitHub Repository
 1. Clone repository
 ```
 git clone https://github.com/kjach/GdanskInternshipDynatrace.git
@@ -17,11 +18,24 @@ git clone https://github.com/kjach/GdanskInternshipDynatrace.git
 mvn clean install
 ```
 
-3. Run application
+3. Run application using maven
 ```
 mvn spring-boot:run
 ```
-
+You can also run the project using .jar file
+```
+java -jar target/GdanskInternshipDynatrace-0.0.1-SNAPSHOT.jar
+```
+Application should run at `http://localhost:8080/`
+## Docker
+1. Pull Docker Image
+```
+docker pull kjach/gid-api:latest
+```
+2. Run container
+```
+docker run -p 8080:8080 kjach/gid-api
+```
 Application should run at `http://localhost:8080/`
 
 # Endpoints and examples
@@ -61,3 +75,8 @@ To run tests:
 ```
 mvn test
 ```
+Notice: Some test may be failed due to exchange rates changes after 25.04.2023
+## Author and additional info
+Project created by Kacper Jach
+
+[Trello Board](https://trello.com/b/ax94PkDU/flow)
